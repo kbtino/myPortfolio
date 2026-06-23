@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home":       "Accueil",
+    "about":      "À propos",
+    "projects":   "Projets",
+    "skills":     "Compétences",
+    "experience": "Expérience",
+    "contact":    "Contact"
+  },
+  "hero": {
+    "greeting":     "Bonjour, je suis",
+    "name":         "Bertin Anlovi",
+    "title":        "Data Engineer & Développeur Full Stack",
+    "subtitle":     "Je conçois des applications robustes et analyse des données complexes pour résoudre des problèmes concrets.",
+    "cta_projects": "Voir mes projets",
+    "cta_contact":  "Me contacter"
+  },
+  "about": {
+    "title":      "À propos",
+    "intro":      "Ingénieur en informatique diplômé de l'École Polytechnique de Lomé, je combine le développement Full Stack (Angular, Django) avec l'ingénierie des données (Python, Pandas, PostgreSQL) et l'administration systèmes Linux.",
+    "download_cv": "Télécharger mon CV"
+  },
+  "projects": {
+    "title":      "Mes Projets",
+    "filter_all": "Tous"
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "experience": {
+    "title":     "Expérience",
+    "education": "Formation",
+    "work":      "Expériences professionnelles"
+  },
+  "contact": {
+    "title":       "Contact",
+    "name":        "Votre nom",
+    "email":       "Votre e-mail",
+    "message":     "Votre message",
+    "send":        "Envoyer",
+    "success":     "Message envoyé avec succès !",
+    "error":       "Une erreur est survenue. Veuillez réessayer."
+  },
+  "footer": {
+    "rights":  "Tous droits réservés",
+    "made_by": "Conçu et développé par"
+  }
+}

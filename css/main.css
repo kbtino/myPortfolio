@@ -1,0 +1,35 @@
+/*
+ * main.css — Point d'entrée CSS
+ *
+ * Ordre intentionnel (cascade CSS) :
+ *   1. Base       → normalisation, variables design tokens, typographie
+ *   2. Composants → éléments partagés entre toutes les pages
+ *   3. Pages      → styles spécifiques à chaque route
+ *   4. Utils      → animations et responsive (s'appliquent en dernier)
+ */
+
+/* ── 1. Base ─────────────────────────────────────────────────── */
+@import url('./base/reset.css');
+@import url('./base/variables.css');
+@import url('./base/typography.css');
+
+/* ── 2. Composants ───────────────────────────────────────────── */
+@import url('./components/navbar.css');
+@import url('./components/hero.css');
+@import url('./components/cards.css');
+@import url('./components/buttons.css');
+@import url('./components/timeline.css');
+@import url('./components/skills-bar.css');
+@import url('./components/footer.css');
+
+/* ── 3. Pages ────────────────────────────────────────────────── */
+@import url('./pages/home.css');
+@import url('./pages/about.css');
+@import url('./pages/projects.css');
+@import url('./pages/skills.css');
+@import url('./pages/experience.css');
+@import url('./pages/contact.css');
+
+/* ── 4. Utils ────────────────────────────────────────────────── */
+@import url('./utils/animations.css');
+@import url('./utils/responsive.css');

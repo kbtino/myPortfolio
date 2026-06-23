@@ -1,0 +1,48 @@
+{
+  "nav": {
+    "home":       "Home",
+    "about":      "About",
+    "projects":   "Projects",
+    "skills":     "Skills",
+    "experience": "Experience",
+    "contact":    "Contact"
+  },
+  "hero": {
+    "greeting":     "Hi, I'm",
+    "name":         "Bertin Anlovi",
+    "title":        "Data Engineer & Full Stack Developer",
+    "subtitle":     "I build robust applications and analyze complex data to solve real-world problems.",
+    "cta_projects": "View my projects",
+    "cta_contact":  "Get in touch"
+  },
+  "about": {
+    "title":       "About Me",
+    "intro":       "Computer Engineering graduate from École Polytechnique de Lomé, I combine Full Stack development (Angular, Django) with data engineering (Python, Pandas, PostgreSQL) and Linux systems administration.",
+    "download_cv": "Download my CV"
+  },
+  "projects": {
+    "title":      "My Projects",
+    "filter_all": "All"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title":     "Experience",
+    "education": "Education",
+    "work":      "Work Experience"
+  },
+  "contact": {
+    "title":   "Contact",
+    "name":    "Your name",
+    "email":   "Your email",
+    "message": "Your message",
+    "send":    "Send",
+    "success": "Message sent successfully!",
+    "error":   "Something went wrong. Please try again."
+  },
+  "footer": {
+    "rights":  "All rights reserved",
+    "made_by": "Designed & built by"
+  }
+}

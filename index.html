@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <meta name="description" content="Bertin Anlovi — Data Engineer & Développeur Full Stack basé à Lomé, Togo. Angular, Django, Python, PostgreSQL." />
+  <meta name="keywords" content="Data Engineer, Full Stack Developer, Django, Angular, Python, PostgreSQL, Togo, Lomé" />
+  <meta name="author" content="ANLOVI Komla Bertin Mawutowu" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bertin Anlovi — Data Engineer & Full Stack Developer" />
+  <meta property="og:description" content="Portfolio de Bertin Anlovi, Data Engineer et Développeur Full Stack basé à Lomé, Togo." />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bertin Anlovi — Portfolio" />
+  <meta name="twitter:description" content="Data Engineer & Full Stack Developer based in Lomé, Togo" />
+
+  <!-- Fonts: Inter (UI) + JetBrains Mono (code/tech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/main.css" />
+
+  <title>Bertin Anlovi — Portfolio</title>
+</head>
+<body>
+
+  <!-- Barre de navigation — rendue par Navbar.js -->
+  <header id="navbar" role="banner" aria-label="Navigation principale"></header>
+
+  <!-- Indicateur de progression au scroll -->
+  <div
+    id="scroll-progress"
+    role="progressbar"
+    aria-label="Progression de lecture"
+    aria-valuenow="0"
+    aria-valuemin="0"
+    aria-valuemax="100"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Contenu principal — peuplé par Router.js -->
+  <main id="app" role="main" tabindex="-1"></main>
+
+  <!-- Pied de page — rendu par Footer.js -->
+  <footer id="footer" role="contentinfo"></footer>
+
+  <!-- Point d'entrée ES Module -->
+  <script type="module" src="js/core/app.js"></script>
+
+</body>
+</html>
