@@ -46,7 +46,9 @@
     "filter_all": "Tous"
   },
   "skills": {
-    "title": "Compétences"
+    "title":       "Compétences",
+    "subtitle":    "Mon stack technique",
+    "tools_title": "Outils & Environnements"
   },
   "experience": {
     "title":     "Expérience",

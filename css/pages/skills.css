@@ -1,1 +1,97 @@
-/* skills.css — Implémenté en v0.7.0 */
+/* ============================================================
+   skills.css — Page Compétences (#/skills)
+   ============================================================ */
+
+/* ── Grille 2 × 2 des catégories ─────────────────────────── */
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+/* ── Carte de catégorie ───────────────────────────────────── */
+.skills__category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--cat-color, var(--accent));
+  border-radius: var(--radius-xl);
+  padding: var(--space-6) var(--space-8);
+  transition:
+    border-color var(--transition-base),
+    box-shadow   var(--transition-base);
+}
+
+.skills__category:hover {
+  border-color: var(--cat-color, var(--accent));
+  box-shadow: 0 0 0 1px var(--cat-color, var(--accent)), var(--shadow-sm);
+}
+
+/* ── En-tête de catégorie : icône + titre ────────────────── */
+.skills__category-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.skills__category-icon {
+  color: var(--cat-color, var(--accent));
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.skills__category-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+/* ── Section outils ───────────────────────────────────────── */
+.skills__tools {
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border);
+}
+
+.skills__tools-title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.skills__tools-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.2em;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.skills__tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills__category {
+    padding: var(--space-5) var(--space-5);
+  }
+}

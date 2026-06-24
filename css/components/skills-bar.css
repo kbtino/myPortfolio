@@ -1,1 +1,71 @@
-/* skills-bar.css — Implémenté en v0.7.0 */
+/* ============================================================
+   skills-bar.css — Barre de progression de compétence
+   ============================================================ */
+
+/* ── Conteneur d'une barre ────────────────────────────────── */
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.skill-bar:last-child {
+  margin-bottom: 0;
+}
+
+/* ── En-tête : nom + niveau ───────────────────────────────── */
+.skill-bar__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.skill-bar__name {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.skill-bar__level {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--cat-color, var(--accent));
+  white-space: nowrap;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ── Piste + remplissage ──────────────────────────────────── */
+.skill-bar__track {
+  height: 5px;
+  background: var(--surface-hover, rgba(255, 255, 255, 0.06));
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+[data-theme="light"] .skill-bar__track {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.skill-bar__fill {
+  height: 100%;
+  width: 0;                       /* départ de l'animation */
+  border-radius: inherit;
+  background: var(--cat-color, var(--accent));
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  animation: growBar 0.85s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms) forwards;
+}
+
+/* ── Animation ────────────────────────────────────────────── */
+@keyframes growBar {
+  to { width: var(--pct, 0%); }
+}
+
+/* Respect prefers-reduced-motion (défini dans responsive.css) */
+@media (prefers-reduced-motion: reduce) {
+  .skill-bar__fill {
+    animation: none;
+    width: var(--pct, 0%);
+  }
+}

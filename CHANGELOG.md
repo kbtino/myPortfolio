@@ -6,6 +6,22 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.7.0] — 2026-06-24
+
+### Added
+- `js/pages/SkillsPage.js` — 4 catégories (Frontend, Backend, Data Engineering, Systèmes & Réseaux) avec barres de progression animées, section outils & environnements
+- `css/components/skills-bar.css` — Composant `.skill-bar` réutilisable : animation `growBar` CSS (`cubic-bezier` 0→`--pct`), niveau coloré `--cat-color`, `prefers-reduced-motion` respecté
+- `css/pages/skills.css` — Grille 2×2 responsive, cartes catégorie avec barre `border-top` colorée, section outils avec `.skills__tools-grid`
+- `data/translations/fr.json` — Clés `skills.subtitle` et `skills.tools_title`
+- `data/translations/en.json` — Clés `skills.subtitle` et `skills.tools_title`
+
+### Notes
+- Les niveaux (Expert / Avancé / Intermédiaire) sont bilingues : directement dans `CATEGORIES` en JS
+- Les pourcentages reflètent les compétences réelles attestées par les projets du CV
+- La section "Outils" utilise des `.tech-tag` sans barre (outils secondaires)
+
+---
+
 ## [0.6.0] — 2026-06-24
 
 ### Added
