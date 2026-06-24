@@ -57,13 +57,26 @@
     "education": "Education & Awards"
   },
   "contact": {
-    "title":   "Contact",
-    "name":    "Your name",
-    "email":   "Your email",
-    "message": "Your message",
-    "send":    "Send",
-    "success": "Message sent successfully!",
-    "error":   "Something went wrong. Please try again."
+    "title":               "Contact",
+    "subtitle":            "Let's work together",
+    "intro":               "Have a project, a freelance opportunity, or just want to connect? I'm available and will get back to you quickly.",
+    "info_location":       "Location",
+    "info_email":          "Email",
+    "info_phone":          "Phone",
+    "available":           "Available for freelance missions",
+    "name":                "Full name",
+    "name_placeholder":    "E.g. Alice Martin",
+    "email":               "Email address",
+    "email_placeholder":   "alice@example.com",
+    "subject":             "Subject",
+    "subject_placeholder": "E.g. Collaboration opportunity",
+    "message":             "Message",
+    "message_placeholder": "Describe your project or request…",
+    "send":                "Send message",
+    "sending":             "Sending…",
+    "success":             "Message sent! I'll get back to you as soon as possible.",
+    "error":               "Network error. Please try again.",
+    "error_rate":          "Please wait 30 seconds before sending again."
   },
   "footer": {
     "rights":  "All rights reserved",

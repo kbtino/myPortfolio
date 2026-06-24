@@ -57,13 +57,26 @@
     "education": "Formation & Distinctions"
   },
   "contact": {
-    "title":   "Contact",
-    "name":    "Votre nom",
-    "email":   "Votre e-mail",
-    "message": "Votre message",
-    "send":    "Envoyer",
-    "success": "Message envoyé avec succès !",
-    "error":   "Une erreur est survenue. Veuillez réessayer."
+    "title":               "Contact",
+    "subtitle":            "Travaillons ensemble",
+    "intro":               "Vous avez un projet, une mission freelance, ou vous souhaitez simplement échanger ? Je suis disponible et répondrai rapidement.",
+    "info_location":       "Localisation",
+    "info_email":          "Email",
+    "info_phone":          "Téléphone",
+    "available":           "Disponible pour des missions freelance",
+    "name":                "Nom complet",
+    "name_placeholder":    "Ex : Alice Martin",
+    "email":               "Adresse e-mail",
+    "email_placeholder":   "alice@example.com",
+    "subject":             "Sujet",
+    "subject_placeholder": "Ex : Opportunité de collaboration",
+    "message":             "Message",
+    "message_placeholder": "Décrivez votre projet ou votre demande…",
+    "send":                "Envoyer le message",
+    "sending":             "Envoi en cours…",
+    "success":             "Message envoyé ! Je vous répondrai dans les plus brefs délais.",
+    "error":               "Erreur réseau. Veuillez réessayer.",
+    "error_rate":          "Merci de patienter 30 secondes avant de renvoyer."
   },
   "footer": {
     "rights":  "Tous droits réservés",

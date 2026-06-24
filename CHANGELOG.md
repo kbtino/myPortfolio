@@ -6,6 +6,28 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.9.0] — 2026-06-24
+
+### Added
+- `js/pages/ContactPage.js` — Formulaire sécurisé : honeypot anti-bot, rate limiting 30 s, validation par champ (blur + submit), envoi AJAX FormSubmit, spinner de chargement, messages de statut succès/erreur
+- `css/pages/contact.css` — Grille 2 colonnes (info | form), cartes de coordonnées, socials pills, badge disponibilité animé, états `.invalid` + focus, spinner `@keyframes contactSpin`, messages statut colorés
+- `data/translations/fr.json` — Section contact complète (19 nouvelles clés)
+- `data/translations/en.json` — Section contact complète (19 nouvelles clés)
+
+### Sécurité (OWASP)
+- **A03 Injection / XSS** : `sanitize()` sur tout contenu affiché, aucune donnée utilisateur insérée via `innerHTML` en brut
+- **Honeypot** : champ `_honey` caché par CSS (`position: absolute; left: -9999px`), pas `display:none` (détectable par les bots)
+- **Rate limiting** : 30 s minimum entre deux envois (timestamp JS côté client)
+- **Pas de données sensibles** : aucune clé API, aucun token dans le code
+- **FormSubmit AJAX** : POST JSON vers `formsubmit.co`, reCAPTCHA désactivé côté serveur (`_captcha: false`)
+
+### Notes
+- **Activation requise** : FormSubmit envoie un e-mail de confirmation à `bertino@hflexsys.com` lors du premier message — cliquer le lien pour activer
+- Mettre à jour l'URL LinkedIn dans `ContactPage.js` (SOCIAL_LINKS) lorsque disponible
+- Le rate limiting est côté client uniquement (protection UX, pas sécuritaire absolue)
+
+---
+
 ## [0.8.0] — 2026-06-24
 
 ### Added
