@@ -1,1 +1,164 @@
-/* variables.css — Design tokens (couleurs, fonts, espacements) — Implémenté en v0.2.0 */
+/* ============================================================
+   variables.css — Design Tokens
+   Portfolio Bertin Anlovi | Dark Tech Theme
+   ============================================================
+   Principe : toutes les valeurs visuelles passent par ici.
+   Changer un token ici propage la modification partout.
+   ============================================================ */
+
+/* ── Thème Dark (défaut) ──────────────────────────────────── */
+:root,
+[data-theme="dark"] {
+
+  /* Fonds */
+  --bg:             #0a0a0f;   /* Fond principal — quasi-noir bleuté   */
+  --surface:        #111118;   /* Cartes, surfaces surélevées          */
+  --surface-hover:  #1a1a28;   /* Survol d'une surface                 */
+  --border:         #1e1e2e;   /* Séparateurs, contours discrets       */
+  --border-focus:   #2d2d44;   /* Contour au focus                     */
+
+  /* Accent principal : cyan neon */
+  --accent:         #00d4ff;
+  --accent-dark:    #0099bb;
+  --accent-muted:   rgba(0, 212, 255, 0.12);
+
+  /* Accent secondaire : violet */
+  --accent-2:       #7c3aed;
+  --accent-2-muted: rgba(124, 58, 237, 0.12);
+
+  /* Texte */
+  --text-primary:   #e2e8f0;   /* Titres, texte principal              */
+  --text-secondary: #94a3b8;   /* Corps de texte                       */
+  --text-muted:     #475569;   /* Labels, placeholders                 */
+  --text-on-accent: #0a0a0f;   /* Texte sur fond accent (btn primary)  */
+
+  /* États */
+  --success:  #10b981;
+  --error:    #ef4444;
+  --warning:  #f59e0b;
+
+  /* Overlay (modals, backdrop) */
+  --overlay: rgba(0, 0, 0, 0.75);
+
+  /* Ombres */
+  --shadow-sm:         0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md:         0 4px 8px rgba(0, 0, 0, 0.5);
+  --shadow-lg:         0 10px 20px rgba(0, 0, 0, 0.6);
+  --shadow-xl:         0 20px 40px rgba(0, 0, 0, 0.7);
+  --shadow-glow:       0 0 20px rgba(0, 212, 255, 0.25);
+  --shadow-glow-lg:    0 0 40px rgba(0, 212, 255, 0.4);
+}
+
+/* ── Thème Light ──────────────────────────────────────────── */
+[data-theme="light"] {
+
+  --bg:             #f8fafc;
+  --surface:        #ffffff;
+  --surface-hover:  #f1f5f9;
+  --border:         #e2e8f0;
+  --border-focus:   #cbd5e1;
+
+  --accent:         #0099bb;   /* Cyan plus sombre sur fond clair      */
+  --accent-dark:    #007a96;
+  --accent-muted:   rgba(0, 153, 187, 0.1);
+
+  --accent-2:       #6d28d9;
+  --accent-2-muted: rgba(109, 40, 217, 0.1);
+
+  --text-primary:   #0f172a;
+  --text-secondary: #475569;
+  --text-muted:     #94a3b8;
+  --text-on-accent: #ffffff;
+
+  --overlay: rgba(0, 0, 0, 0.4);
+
+  --shadow-sm:      0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md:      0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg:      0 10px 20px rgba(0, 0, 0, 0.16);
+  --shadow-xl:      0 20px 40px rgba(0, 0, 0, 0.2);
+  --shadow-glow:    0 0 20px rgba(0, 153, 187, 0.2);
+  --shadow-glow-lg: 0 0 40px rgba(0, 153, 187, 0.35);
+}
+
+/* ── Typographie ──────────────────────────────────────────── */
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+               'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', Courier, monospace;
+
+  /* Taille de police */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.25rem;    /* 20px */
+  --text-2xl:  1.5rem;     /* 24px */
+  --text-3xl:  1.875rem;   /* 30px */
+  --text-4xl:  2.25rem;    /* 36px */
+  --text-5xl:  3rem;       /* 48px */
+  --text-6xl:  3.75rem;    /* 60px */
+
+  /* Graisse */
+  --font-light:    300;
+  --font-regular:  400;
+  --font-medium:   500;
+  --font-semibold: 600;
+  --font-bold:     700;
+
+  /* Interlignage */
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+
+  /* Espacement lettres */
+  --tracking-tight:   -0.025em;
+  --tracking-normal:   0em;
+  --tracking-wide:     0.025em;
+  --tracking-wider:    0.05em;
+  --tracking-widest:   0.1em;
+}
+
+/* ── Espacement ───────────────────────────────────────────── */
+:root {
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+}
+
+/* ── Bords arrondis ───────────────────────────────────────── */
+:root {
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+}
+
+/* ── Transitions ──────────────────────────────────────────── */
+:root {
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* ── Layout global ────────────────────────────────────────── */
+:root {
+  --navbar-height:  70px;
+  --footer-height: 120px;
+  --max-width:    1200px;
+  --z-navbar:     100;
+  --z-overlay:    200;
+  --z-modal:      300;
+}

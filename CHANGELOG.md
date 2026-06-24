@@ -6,6 +6,22 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.2.0] — 2026-06-24
+
+### Added
+- `css/base/variables.css` — Design tokens complets : couleurs dark/light, typographie, espacement, radius, ombres, transitions, layout
+- `css/base/reset.css` — Modern CSS Reset : box model universel, antialiasing, focus accessible, squelette `.page` et `.page__placeholder`
+- `css/base/typography.css` — Échelle typographique complète, patterns `.section-title` / `.section-subtitle` / `.tech-tag` réutilisables sur toutes les pages
+- `css/components/buttons.css` — Système de boutons : 3 variantes (primary, outline, ghost), 2 tailles (sm, lg), états disabled et focus
+
+### Details
+- Thème dark : fond `#0a0a0f`, accent cyan `#00d4ff`, accent secondaire violet `#7c3aed`
+- Thème light : fond `#f8fafc`, accent cyan `#0099bb` — activé via `data-theme="light"` sur `<html>`
+- `.section-title::after` : ligne dégradée cyan→violet automatique sous chaque titre
+- Transition fluide thème dark↔light sans flash (CSS Custom Properties + transition body)
+
+---
+
 ## [0.1.0] — 2026-06-23
 
 ### Added

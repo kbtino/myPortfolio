@@ -1,1 +1,99 @@
-/* buttons.css — Implémenté en v0.2.0 */
+/* ============================================================
+   buttons.css — Système de boutons
+   3 variantes : primary, outline, ghost
+   2 tailles en plus de la base : sm, lg
+   ============================================================ */
+
+/* ── Base ─────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  letter-spacing: var(--tracking-wide);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;   /* Utilisé aussi comme <a> */
+}
+
+/* ── Variante : Primary ───────────────────────────────────── */
+/* Fond plein cyan → contour cyan au survol */
+.btn--primary {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  border-color: var(--accent);
+}
+
+.btn--primary:hover {
+  background: transparent;
+  color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ── Variante : Outline ───────────────────────────────────── */
+/* Contour cyan transparent → fond plein au survol */
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn--outline:hover {
+  background: var(--accent);
+  color: var(--text-on-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ── Variante : Ghost ─────────────────────────────────────── */
+/* Discret, pour actions secondaires */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+.btn--ghost:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+  background: var(--surface-hover);
+}
+
+/* ── Tailles ──────────────────────────────────────────────── */
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  letter-spacing: var(--tracking-wider);
+}
+
+/* ── États ────────────────────────────────────────────────── */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ── Bouton icône seul ────────────────────────────────────── */
+.btn--icon {
+  padding: var(--space-3);
+  aspect-ratio: 1;
+  border-radius: var(--radius-md);
+}
