@@ -13,6 +13,19 @@ import { Footer }       from '../components/Footer.js';
 import { ThemeToggle }  from '../components/ThemeToggle.js';
 import { i18n }         from '../utils/i18n.js';
 
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrolled  = window.scrollY;
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    const pct       = maxScroll > 0 ? Math.round((scrolled / maxScroll) * 100) : 0;
+    bar.style.width = `${pct}%`;
+    bar.setAttribute('aria-valuenow', pct);
+  }, { passive: true });
+}
+
 async function init() {
   // Préférences utilisateur : appliquées avant le rendu pour éviter le flash
   ThemeToggle.restore();
@@ -24,6 +37,9 @@ async function init() {
 
   // Routeur : écoute hashchange et charge la bonne page
   Router.init();
+
+  // Barre de progression de lecture (#scroll-progress déjà stylé dans reset.css)
+  initScrollProgress();
 }
 
 document.addEventListener('DOMContentLoaded', init);

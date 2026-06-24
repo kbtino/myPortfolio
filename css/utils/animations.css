@@ -1,1 +1,52 @@
-/* animations.css — Implémenté en v1.0.0 */
+/* ============================================================
+   animations.css — Utilitaires d'animation globaux
+   v1.0.0 : déclenchement via IntersectionObserver (observer.js)
+   ============================================================ */
+
+/* ── Keyframes partagés ───────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+/* ── État initial des éléments à animer ───────────────────── */
+/* IO (observer.js) ajoute .is-visible quand l'élément entre en vue */
+.animate-fade-up,
+.animate-fade-left {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.animate-fade-up   { transform: translateY(24px); }
+.animate-fade-left { transform: translateX(30px); }
+
+/* ── Animation déclenchée ─────────────────────────────────── */
+.animate-fade-up.is-visible {
+  animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms) both;
+}
+
+.animate-fade-left.is-visible {
+  animation: fadeLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) var(--delay, 0ms) both;
+}
+
+/* ── En-tête de section commun ────────────────────────────── */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-12);
+}
+
+/* ── Accessibilité : mouvement réduit ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-left {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    will-change: auto !important;
+  }
+}

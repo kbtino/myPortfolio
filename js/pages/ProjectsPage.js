@@ -8,8 +8,9 @@
  *   - Support FR/EN complet via i18n.getLang()
  */
 
-import { i18n }     from '../utils/i18n.js';
-import { sanitize } from '../utils/sanitize.js';
+import { i18n }                 from '../utils/i18n.js';
+import { sanitize }             from '../utils/sanitize.js';
+import { initScrollAnimations } from '../utils/observer.js';
 
 // ── Filtres ───────────────────────────────────────────────────
 const FILTERS = [
@@ -156,6 +157,7 @@ export const ProjectsPage = {
 
       grid.innerHTML = buildGrid(projects, lang);
       this._bindFilters(container, lang);
+      initScrollAnimations(); // Cartes injectées en async → re-scan IO
     } catch {
       const grid = container.querySelector('#projects-grid');
       if (grid) {

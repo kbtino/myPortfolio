@@ -6,6 +6,32 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [1.0.0] — 2026-06-24 — Release
+
+### Added
+- `js/utils/observer.js` — IntersectionObserver : stratégie hybride (visible → `.is-visible` immédiat, hors-écran → IO), évite le FOIUC (Flash Of Invisible Unstyled Content)
+- `css/utils/animations.css` — Système d'animation complet : keyframes `fadeUp`/`fadeLeft`, classes `.animate-fade-up/.animate-fade-left` + état `.is-visible`, `.section-header`, `prefers-reduced-motion`
+- `js/core/app.js` — `initScrollProgress()` : mise à jour de `#scroll-progress` au scroll (passive listener, aria-valuenow dynamique)
+- `index.html` — `<meta name="theme-color">` dark/light, commentaires pour `og:url` et `og:image`
+
+### Changed
+- `js/core/router.js` — Import `initScrollAnimations`, appelé après chaque navigation (y compris `lang-change`)
+- `js/pages/ProjectsPage.js` — Import `initScrollAnimations`, appelé après le chargement async des cartes
+- `css/components/hero.css` — Keyframes `fadeUp`/`fadeLeft` et classes `.animate-fade-up/.animate-fade-left` retirés (migrés dans `animations.css`)
+
+### Fonctionnement de l'animation
+1. Chaque page est rendue → `initScrollAnimations()` appelé
+2. Éléments dans le viewport → `.is-visible` ajouté **synchronement** (pas de flash)
+3. Éléments hors écran → IO les surveille → `.is-visible` au scroll
+4. `.animate-fade-up.is-visible` → `@keyframes fadeUp` avec `--delay` CSS custom property
+
+### SEO — actions restantes après déploiement
+- Renseigner `og:url` avec l'URL de production
+- Créer `assets/og-preview.png` (1200×630px, screenshot du portfolio) et renseigner `og:image`
+- Soumettre le sitemap dans Google Search Console
+
+---
+
 ## [0.9.0] — 2026-06-24
 
 ### Added

@@ -8,8 +8,9 @@
  * pour synchroniser l'indicateur de lien actif.
  */
 
-import { Navbar }        from '../components/Navbar.js';
-import { HomePage }      from '../pages/HomePage.js';
+import { Navbar }               from '../components/Navbar.js';
+import { initScrollAnimations } from '../utils/observer.js';
+import { HomePage }             from '../pages/HomePage.js';
 import { AboutPage }     from '../pages/AboutPage.js';
 import { ProjectsPage }  from '../pages/ProjectsPage.js';
 import { SkillsPage }    from '../pages/SkillsPage.js';
@@ -46,6 +47,10 @@ function navigate() {
   // Accessibilité : focus sur le contenu principal après navigation
   container.focus();
   window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Déclenche les animations pour les éléments visibles immédiatement,
+  // et surveille via IO les éléments hors écran
+  initScrollAnimations();
 }
 
 export const Router = {
