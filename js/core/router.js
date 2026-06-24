@@ -3,8 +3,12 @@
  *
  * Convention : #/route → charge la page correspondante.
  * Toute route inconnue redirige vers #/ (page d'accueil).
+ *
+ * Après chaque navigation, Navbar.updateActiveLink() est appelé
+ * pour synchroniser l'indicateur de lien actif.
  */
 
+import { Navbar }        from '../components/Navbar.js';
 import { HomePage }      from '../pages/HomePage.js';
 import { AboutPage }     from '../pages/AboutPage.js';
 import { ProjectsPage }  from '../pages/ProjectsPage.js';
@@ -27,8 +31,8 @@ function getRoute() {
 }
 
 function navigate() {
-  const route    = getRoute();
-  const Page     = ROUTES[route] ?? ROUTES['/'];
+  const route     = getRoute();
+  const Page      = ROUTES[route] ?? ROUTES['/'];
   const container = document.getElementById('app');
 
   if (!container) return;
@@ -36,7 +40,10 @@ function navigate() {
   container.innerHTML = '';
   Page.render(container);
 
-  // Accessibilité : remet le focus sur le contenu principal après navigation
+  // Synchronise le lien actif dans la navbar
+  Navbar.updateActiveLink(route);
+
+  // Accessibilité : focus sur le contenu principal après navigation
   container.focus();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

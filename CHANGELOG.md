@@ -6,6 +6,23 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.3.0] — 2026-06-24
+
+### Added
+- `js/components/Navbar.js` — Navbar complète : liens actifs, hamburger mobile, toggle thème, toggle FR/EN, ombre au scroll
+- `js/components/Footer.js` — Footer avec liens sociaux (GitHub, LinkedIn), copyright dynamique
+- `js/core/router.js` — Import Navbar + appel `updateActiveLink()` après chaque navigation
+- `css/components/navbar.css` — Glassmorphism, animation hamburger → croix, menu mobile déroulant
+- `css/components/footer.css` — Flex responsive, hover sur icônes sociaux
+- `css/utils/responsive.css` — Breakpoints sm/md/lg, réduction typographique mobile, `prefers-reduced-motion`
+
+### Notes
+- Mettre à jour les URLs GitHub et LinkedIn dans `js/components/Footer.js`
+- La Navbar se re-rend automatiquement lors du changement de langue (i18n)
+- Le lien actif est mis à jour par `Router` après chaque navigation (pas de listener dupliqué)
+
+---
+
 ## [0.2.0] — 2026-06-24
 
 ### Added

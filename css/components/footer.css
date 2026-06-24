@@ -1,1 +1,63 @@
-/* footer.css — Implémenté en v0.3.0 */
+/* ============================================================
+   footer.css — Pied de page
+   ============================================================ */
+
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Copyright */
+.footer__copy {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+/* Liens sociaux */
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.footer__social-link:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* Mention "fait par" */
+.footer__made {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+/* ── Mobile ───────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-5);
+  }
+}
