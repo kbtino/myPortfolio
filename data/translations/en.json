@@ -16,9 +16,29 @@
     "cta_cv":       "Download CV"
   },
   "about": {
-    "title":       "About Me",
-    "intro":       "Computer Engineering graduate from École Polytechnique de Lomé, I combine Full Stack development (Angular, Django) with data engineering (Python, Pandas, PostgreSQL) and Linux systems administration.",
-    "download_cv": "Download my CV"
+    "title":          "About Me",
+    "subtitle":       "My journey, values, and vision",
+    "bio_title":      "Who am I?",
+    "bio_p1":         "Computer Engineering graduate (Mention Assez-Bien) from École Polytechnique de Lomé, I build robust applications and analyze complex data. My hybrid profile covers Full Stack development (Angular, Django), data engineering (Python, Pandas) and Linux systems administration.",
+    "bio_p2":         "Currently working as a freelance Data Engineer, I take on concrete projects: analytics pipelines, secure APIs, HPC deployment. Laureate of the Huawei Seeds for the Future program, I represented Togo in an international AI competition in Essaouira, Morocco.",
+    "contact_title":  "Contact Info",
+    "languages_title":"Languages",
+    "lang_fr":        "French",
+    "lang_fr_level":  "Advanced",
+    "lang_en":        "English",
+    "lang_en_level":  "Technical",
+    "edu_title":      "Education",
+    "edu_degree":     "Professional Bachelor's",
+    "edu_field":      "Maintenance and Computer Networks",
+    "edu_school":     "École Polytechnique de Lomé · Université de Lomé",
+    "edu_period":     "Oct. 2021 — Apr. 2025",
+    "edu_mention":    "Mention Assez-Bien · 13.59 / 20",
+    "edu_credits":    "183 credits validated out of 180",
+    "soft_title":     "Personal Skills",
+    "cert_title":     "Certifications",
+    "cert_in_progress": "In progress",
+    "cta_cv":         "Download my CV",
+    "cta_projects":   "View my projects"
   },
   "projects": {
     "title":      "My Projects",

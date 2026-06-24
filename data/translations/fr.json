@@ -16,9 +16,29 @@
     "cta_cv":       "Télécharger CV"
   },
   "about": {
-    "title":       "À propos",
-    "intro":       "Ingénieur en informatique diplômé de l'École Polytechnique de Lomé, je combine le développement Full Stack (Angular, Django) avec l'ingénierie des données (Python, Pandas, PostgreSQL) et l'administration systèmes Linux.",
-    "download_cv": "Télécharger mon CV"
+    "title":          "À propos",
+    "subtitle":       "Mon parcours, mes valeurs et ma vision",
+    "bio_title":      "Qui suis-je ?",
+    "bio_p1":         "Ingénieur en informatique diplômé avec mention Assez-Bien de l'École Polytechnique de Lomé, je construis des applications robustes et analyse des données complexes. Mon profil hybride couvre le développement Full Stack (Angular, Django), l'ingénierie des données (Python, Pandas) et l'administration systèmes Linux.",
+    "bio_p2":         "Actuellement Data Engineer freelance, je m'investis dans des projets concrets : pipelines d'analyse, APIs sécurisées, déploiement HPC. Lauréat du programme Huawei Seeds for the Future, j'ai représenté le Togo dans une compétition internationale d'IA à Essaouira, Maroc.",
+    "contact_title":  "Coordonnées",
+    "languages_title":"Langues",
+    "lang_fr":        "Français",
+    "lang_fr_level":  "Avancé",
+    "lang_en":        "Anglais",
+    "lang_en_level":  "Technique",
+    "edu_title":      "Formation",
+    "edu_degree":     "Licence Professionnelle",
+    "edu_field":      "Maintenance et Réseaux Informatiques",
+    "edu_school":     "École Polytechnique de Lomé · Université de Lomé",
+    "edu_period":     "Oct. 2021 — Avr. 2025",
+    "edu_mention":    "Mention Assez-Bien · 13,59 / 20",
+    "edu_credits":    "183 crédits validés sur 180",
+    "soft_title":     "Compétences personnelles",
+    "cert_title":     "Certifications",
+    "cert_in_progress": "En cours",
+    "cta_cv":         "Télécharger mon CV",
+    "cta_projects":   "Voir mes projets"
   },
   "projects": {
     "title":      "Mes Projets",

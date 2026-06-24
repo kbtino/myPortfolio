@@ -6,6 +6,21 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.5.0] — 2026-06-24
+
+### Added
+- `js/pages/AboutPage.js` — Bio, coordonnées cliquables, langues, diplôme EPL, 6 compétences personnelles, 3 blocs certifications (Cisco, Huawei, DataCamp)
+- `css/pages/about.css` — Layout intro 2 colonnes, carte diplôme avec barre accent, grille soft-skills, grille certifications, badge "En cours" animé
+- `data/translations/fr.json` — Section `about` complète (14 nouvelles clés)
+- `data/translations/en.json` — Section `about` complète (14 nouvelles clés)
+
+### Notes
+- La carte Huawei met en avant la compétition internationale IA+IoT (Maroc 2024)
+- Badge "En cours" avec animation `pulse` pour DataCamp Data Engineer Associate
+- Mettre à jour les URLs GitHub/LinkedIn dans `AboutPage.js` si différentes de celles dans `Footer.js`
+
+---
+
 ## [0.4.0] — 2026-06-24
 
 ### Added
