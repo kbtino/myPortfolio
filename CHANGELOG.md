@@ -6,6 +6,22 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.8.0] — 2026-06-24
+
+### Added
+- `js/pages/ExperiencePage.js` — Timeline bilingue : 4 postes professionnels + Licence EPL + Prix Huawei, dot animé pour le poste actuel, badges "Mention" et "Représentant du Togo"
+- `css/components/timeline.css` — Composant `.experience-item` (flex aside+carte), dot pulsant pour poste actuel, ligne de connexion dégradée, `.experience-card` avec barre gauche `--type-color`
+- `css/pages/experience.css` — Layout sections, `.exp-section-title` avec barre dégradée et icône
+- `data/translations/fr.json` — Clé `experience.subtitle` + libellé `education` mis à jour
+- `data/translations/en.json` — Clé `experience.subtitle` + libellé `education` mis à jour
+
+### Notes
+- Couleurs par type : Cyan → travail, Violet → formation, Ambre → distinction
+- `color-mix()` utilisé pour le halo du dot actuel, fallback CSS prévu pour les anciens navigateurs
+- Les données sont hardcodées dans le JS (pas de JSON externe) — mise à jour directe dans `WORK_ITEMS` / `EDU_ITEMS`
+
+---
+
 ## [0.7.0] — 2026-06-24
 
 ### Added

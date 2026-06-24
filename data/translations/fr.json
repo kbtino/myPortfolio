@@ -52,8 +52,9 @@
   },
   "experience": {
     "title":     "Expérience",
-    "education": "Formation",
-    "work":      "Expériences professionnelles"
+    "subtitle":  "Mon parcours professionnel",
+    "work":      "Expériences professionnelles",
+    "education": "Formation & Distinctions"
   },
   "contact": {
     "title":   "Contact",

@@ -1,1 +1,57 @@
-/* experience.css — Implémenté en v0.8.0 */
+/* ============================================================
+   experience.css — Page Expérience (#/experience)
+   ============================================================ */
+
+/* ── Sections (Expérience pro / Formation) ────────────────── */
+.experience-page__section {
+  margin-bottom: var(--space-16);
+}
+
+/* ── Titre de section avec icône ──────────────────────────── */
+.exp-section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-4);
+  border-bottom: 2px solid var(--border);
+}
+
+.exp-section-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 1.2em;
+  background: linear-gradient(to bottom, var(--accent), var(--accent-2));
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.exp-section-title__icon {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .experience-card {
+    padding: var(--space-4) var(--space-4);
+  }
+
+  .experience-card__header {
+    flex-direction: column;
+  }
+
+  .experience-card__period {
+    align-self: flex-start;
+  }
+
+  .experience-item {
+    gap: var(--space-4);
+  }
+}

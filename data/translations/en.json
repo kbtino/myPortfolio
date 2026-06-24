@@ -52,8 +52,9 @@
   },
   "experience": {
     "title":     "Experience",
-    "education": "Education",
-    "work":      "Work Experience"
+    "subtitle":  "My professional journey",
+    "work":      "Work Experience",
+    "education": "Education & Awards"
   },
   "contact": {
     "title":   "Contact",

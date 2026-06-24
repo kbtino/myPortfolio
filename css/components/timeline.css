@@ -1,1 +1,170 @@
-/* timeline.css — Implémenté en v0.8.0 */
+/* ============================================================
+   timeline.css — Timeline verticale d'expérience
+   ============================================================ */
+
+/* ── Conteneur de la timeline ─────────────────────────────── */
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Item : côté gauche (dot + ligne) + carte ─────────────── */
+.experience-item {
+  display: flex;
+  gap: var(--space-6);
+}
+
+/* ── Colonne gauche : dot + ligne verticale ───────────────── */
+.experience-item__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14px;
+  flex-shrink: 0;
+}
+
+.experience-item__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+  background: var(--type-color, var(--accent));
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--type-color, var(--accent));
+  margin-top: 6px;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+}
+
+/* Dot animé pour le poste actuel */
+.experience-item__dot--current {
+  animation: pulseDot 2.2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { box-shadow: 0 0 0 2px var(--type-color, var(--accent)); }
+  50%       { box-shadow: 0 0 0 6px color-mix(in srgb, var(--type-color, var(--accent)) 30%, transparent); }
+}
+
+/* Fallback sans color-mix (navigateurs anciens) */
+@supports not (color: color-mix(in srgb, red 50%, blue)) {
+  .experience-item__dot--current {
+    animation: pulseDotLegacy 2.2s ease-in-out infinite;
+  }
+  @keyframes pulseDotLegacy {
+    0%, 100% { box-shadow: 0 0 0 2px var(--type-color, var(--accent)); }
+    50%       { box-shadow: 0 0 0 6px rgba(0, 212, 255, 0.25); }
+  }
+}
+
+.experience-item__line {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(
+    to bottom,
+    var(--type-color, var(--accent)),
+    var(--border)
+  );
+  margin: var(--space-2) 0;
+  min-height: var(--space-8);
+  opacity: 0.4;
+}
+
+.experience-item:last-child .experience-item__line {
+  display: none;
+}
+
+/* ── Carte de contenu ─────────────────────────────────────── */
+.experience-card {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--type-color, var(--accent));
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-6);
+  transition:
+    border-color var(--transition-base),
+    box-shadow   var(--transition-base);
+}
+
+.experience-card:hover {
+  border-color: var(--type-color, var(--accent));
+  box-shadow: var(--shadow-md);
+}
+
+/* ── En-tête de carte ─────────────────────────────────────── */
+.experience-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.experience-card__titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.experience-card__title {
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+}
+
+.experience-card__company {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.experience-card__location {
+  color: var(--text-muted);
+}
+
+/* Badge période */
+.experience-card__period {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.experience-card__period--current {
+  color: var(--accent);
+  border-color: rgba(0, 212, 255, 0.3);
+  background: var(--accent-muted);
+}
+
+/* ── Corps ────────────────────────────────────────────────── */
+.experience-card__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.experience-card__mention {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--accent-2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.08);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+.experience-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ── Respect des animations réduites ─────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .experience-item__dot--current {
+    animation: none;
+  }
+}
