@@ -1,1 +1,107 @@
-[]
+[
+  {
+    "id": "pipeline-ventes",
+    "title": {
+      "fr": "Pipeline d'analyse de données de ventes",
+      "en": "Sales Data Analysis Pipeline"
+    },
+    "description": {
+      "fr": "Automatisation du nettoyage et de l'agrégation de données de ventes avec Pandas et NumPy. Détection automatique des doublons, valeurs manquantes et anomalies. Réduction significative du temps de traitement manuel.",
+      "en": "Automated cleaning and aggregation of sales data using Pandas and NumPy. Automatic detection of duplicates, missing values and anomalies. Significant reduction in manual processing time."
+    },
+    "tags": ["Python", "Pandas", "NumPy", "Data Engineering"],
+    "category": "data",
+    "period": {
+      "fr": "Mai 2026 — Présent",
+      "en": "May 2026 — Present"
+    },
+    "company": "HflexSys",
+    "github": null,
+    "demo": null,
+    "featured": true
+  },
+  {
+    "id": "gestion-stock",
+    "title": {
+      "fr": "Application de gestion de stock",
+      "en": "Inventory Management App"
+    },
+    "description": {
+      "fr": "Backend Django REST Framework avec authentification JWT et gestion des rôles. Modélisation PostgreSQL, API sécurisées. Projet d'équipe de 4 personnes.",
+      "en": "Django REST Framework backend with JWT authentication and role management. PostgreSQL modeling, secure APIs. Team project of 4 people."
+    },
+    "tags": ["Django", "DRF", "PostgreSQL", "JWT", "REST API"],
+    "category": "backend",
+    "period": {
+      "fr": "Jan. 2026 — Avr. 2026",
+      "en": "Jan. 2026 — Apr. 2026"
+    },
+    "company": "HflexSys",
+    "github": null,
+    "demo": null,
+    "featured": true
+  },
+  {
+    "id": "gestion-rdv",
+    "title": {
+      "fr": "Application de gestion de rendez-vous",
+      "en": "Appointment Management App"
+    },
+    "description": {
+      "fr": "Application complète de prise de rendez-vous avec interface Angular moderne et backend Django sécurisé. Intégration de la gestion de données personnelles.",
+      "en": "Complete appointment booking application with a modern Angular UI and secure Django backend. Personal data management integration."
+    },
+    "tags": ["Angular", "Django", "MySQL", "TypeScript", "Full Stack"],
+    "category": "fullstack",
+    "period": {
+      "fr": "Sept. 2025 — Nov. 2025",
+      "en": "Sept. 2025 — Nov. 2025"
+    },
+    "company": "La Citoyenne Vie S.A.",
+    "github": null,
+    "demo": null,
+    "featured": true
+  },
+  {
+    "id": "hpc-cluster",
+    "title": {
+      "fr": "Déploiement cluster HPC",
+      "en": "HPC Cluster Deployment"
+    },
+    "description": {
+      "fr": "Déploiement d'un cluster de calcul à haute performance sous Rocky Linux. Configuration des équipements réseaux, VPN, accès distant et outils de calcul scientifique.",
+      "en": "Deployed a High-Performance Computing cluster under Rocky Linux. Network equipment, VPN, remote access and scientific computing tools configuration."
+    },
+    "tags": ["Linux", "HPC", "Rocky Linux", "VPN", "Networking"],
+    "category": "systems",
+    "period": {
+      "fr": "Nov. 2024 — Août 2025",
+      "en": "Nov. 2024 — Aug. 2025"
+    },
+    "company": "LARSI — Université de Lomé",
+    "github": null,
+    "demo": null,
+    "featured": false
+  },
+  {
+    "id": "portfolio",
+    "title": {
+      "fr": "Portfolio professionnel",
+      "en": "Professional Portfolio"
+    },
+    "description": {
+      "fr": "SPA Vanilla JavaScript sans framework. Routeur hash-based, moteur i18n FR/EN, thème dark/light, design modulaire CSS avec Custom Properties.",
+      "en": "Vanilla JavaScript SPA with no framework. Custom hash-based router, FR/EN i18n engine, dark/light theme, modular CSS with Custom Properties."
+    },
+    "tags": ["JavaScript", "HTML5", "CSS3", "SPA", "i18n"],
+    "category": "frontend",
+    "period": {
+      "fr": "Juin 2026",
+      "en": "June 2026"
+    },
+    "company": "Projet personnel",
+    "github": "https://github.com/bertin-anlovi/portfolio",
+    "demo": null,
+    "featured": false
+  }
+]

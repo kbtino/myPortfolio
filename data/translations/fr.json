@@ -42,6 +42,7 @@
   },
   "projects": {
     "title":      "Mes Projets",
+    "subtitle":   "Ce que j'ai construit",
     "filter_all": "Tous"
   },
   "skills": {

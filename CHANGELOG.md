@@ -6,6 +6,23 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.6.0] — 2026-06-24
+
+### Added
+- `data/projects.json` — 5 projets réels : pipeline de données, gestion de stock, gestion de rendez-vous, cluster HPC, portfolio
+- `js/pages/ProjectsPage.js` — Grille de cartes avec filtres par catégorie (data / backend / fullstack / systems / frontend), chargement async, protection XSS, support FR/EN
+- `css/components/cards.css` — Composant `.project-card` réutilisable : barre `border-top` colorée par catégorie via `--cat-color`, hover lift, étoile featured, tags
+- `css/pages/projects.css` — Layout grille `auto-fill minmax(320px)`, boutons filtres pill, états loading/empty
+- `data/translations/fr.json` — Clé `projects.subtitle` ajoutée
+- `data/translations/en.json` — Clé `projects.subtitle` ajoutée
+
+### Notes
+- Mettre à jour `github` et `demo` dans `data/projects.json` lorsque les repos sont publics
+- Le portfolio pointe sur `https://github.com/bertin-anlovi/portfolio` — à ajuster si différent
+- Chaque carte affiche automatiquement la langue courante (FR/EN) sans re-fetch
+
+---
+
 ## [0.5.0] — 2026-06-24
 
 ### Added
