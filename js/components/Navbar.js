@@ -150,7 +150,9 @@ export const Navbar = {
     document.getElementById('lang-toggle')?.addEventListener('click', async () => {
       const next = i18n.getLang() === 'fr' ? 'en' : 'fr';
       await i18n.setLang(next);
-      this.render(); // Re-rendu complet : liens + bouton langue
+      this.render(); // Re-rendu navbar avec nouvelle langue
+      // Notifie le Router pour re-rendre la page dans la nouvelle langue
+      window.dispatchEvent(new CustomEvent('lang-change'));
     });
 
     // ── Ombre au scroll ────────────────────────────────────

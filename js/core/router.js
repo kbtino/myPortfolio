@@ -51,6 +51,8 @@ function navigate() {
 export const Router = {
   init() {
     window.addEventListener('hashchange', navigate);
+    // Re-rend la page courante quand la langue change (déclenché par Navbar)
+    window.addEventListener('lang-change', navigate);
     navigate(); // Route initiale au chargement
   },
 };

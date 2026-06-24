@@ -1,1 +1,370 @@
-/* hero.css — Implémenté en v0.4.0 */
+/* ============================================================
+   hero.css — Section héro (page d'accueil)
+   ============================================================ */
+
+/* ── Section ──────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── Fond décoratif ───────────────────────────────────────── */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Grille pointillée subtile */
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent);
+}
+
+/* Lueur cyan (droite) */
+.hero__glow--cyan {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.07) 0%, transparent 65%);
+  filter: blur(30px);
+  border-radius: var(--radius-full);
+}
+
+/* Lueur violette (gauche bas) */
+.hero__glow--violet {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.07) 0%, transparent 65%);
+  filter: blur(30px);
+  border-radius: var(--radius-full);
+}
+
+/* ── Conteneur principal ──────────────────────────────────── */
+.hero__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--space-16) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+/* ── Zone texte ───────────────────────────────────────────── */
+.hero__content {
+  flex: 1;
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Salutation avec lignes décoratives */
+.hero__greeting {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+.hero__line {
+  flex: 1;
+  height: 1px;
+  background: var(--accent);
+  max-width: 50px;
+  opacity: 0.4;
+}
+
+/* Nom */
+.hero__name {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-bold);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.1;
+  color: var(--text-primary);
+}
+
+/* Rôle animé */
+.hero__role-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  min-height: 2rem;
+}
+
+.hero__role-prefix {
+  color: var(--accent-2);
+  font-weight: var(--font-medium);
+  opacity: 0.7;
+}
+
+.hero__role {
+  color: var(--accent);
+  font-weight: var(--font-medium);
+}
+
+/* Curseur clignotant */
+.hero__cursor {
+  color: var(--accent);
+  font-weight: var(--font-light);
+  animation: blink 0.8s step-end infinite;
+}
+
+/* Description */
+.hero__subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  max-width: 540px;
+}
+
+/* Boutons CTA */
+.hero__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Liens sociaux */
+.hero__social {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-2);
+}
+
+.hero__social-link {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  transition:
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.hero__social-link:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ── Zone visuelle (photo + badges) ──────────────────────── */
+.hero__visual {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 380px;
+}
+
+/* Anneau avec dégradé tournant */
+.hero__photo-outer {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  isolation: isolate;
+}
+
+.hero__photo-outer::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  background: conic-gradient(
+    from 0deg,
+    var(--accent),
+    var(--accent-2),
+    var(--accent)
+  );
+  animation: spin 8s linear infinite;
+  z-index: -1;
+}
+
+/* Photo / placeholder initiales */
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  border: 4px solid var(--bg);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__initials {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-bold);
+  color: var(--accent);
+  letter-spacing: var(--tracking-tight);
+  font-family: var(--font-sans);
+  user-select: none;
+}
+
+/* ── Badges tech flottants ────────────────────────────────── */
+.hero__badge {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+  z-index: 2;
+}
+
+.hero__badge--1 { top:  5%;  left:  -10px; animation-delay: 0s;    }
+.hero__badge--2 { top:  38%; right: -20px; animation-delay: 0.8s;  }
+.hero__badge--3 { bottom: 22%; left: -15px; animation-delay: 1.6s;  }
+.hero__badge--4 { bottom: 2%;  right: -5px; animation-delay: 2.4s;  }
+
+/* ── Indicateur de scroll ─────────────────────────────────── */
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0;
+  animation: fadeUp 0.6s ease 1.2s forwards;
+}
+
+.hero__scroll-mouse {
+  width: 24px;
+  height: 38px;
+  border: 2px solid var(--text-muted);
+  border-radius: var(--radius-full);
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.hero__scroll-wheel {
+  width: 4px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  animation: scrollWheel 1.6s ease infinite;
+}
+
+.hero__scroll-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+}
+
+/* ── Keyframes ────────────────────────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-8px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes scrollWheel {
+  0%   { transform: translateY(0);    opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+@keyframes fadeLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0);    }
+}
+
+/* ── Classes d'animation (utilisées via style="--delay:Xms") ─ */
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+.animate-fade-left {
+  opacity: 0;
+  animation: fadeLeft 0.7s ease forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__name { font-size: var(--text-5xl); }
+}
+
+@media (max-width: 768px) {
+  .hero__container {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+    gap: var(--space-8);
+  }
+
+  .hero__content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .hero__greeting {
+    justify-content: center;
+  }
+
+  .hero__name   { font-size: var(--text-4xl); }
+  .hero__subtitle { font-size: var(--text-base); }
+
+  .hero__visual {
+    width: 220px;
+    height: 260px;
+  }
+
+  .hero__photo-outer { width: 200px; height: 200px; }
+
+  /* Masque les badges sur mobile (évite le débordement) */
+  .hero__badge { display: none; }
+
+  .hero__scroll { display: none; }
+}

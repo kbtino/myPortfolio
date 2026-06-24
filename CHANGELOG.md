@@ -6,6 +6,23 @@ Format : [Semantic Versioning](https://semver.org) | [Conventional Commits](http
 
 ---
 
+## [0.4.0] — 2026-06-24
+
+### Added
+- `js/pages/HomePage.js` — Hero complet : greeting, nom, rôle animé (classe `Typer`), description, CTAs, réseaux sociaux, photo/initiales, badges flottants, scroll indicator
+- `css/components/hero.css` — Grille de fond, lueurs cyan/violet, anneau tournant (conic-gradient), badges flottants, animations fadeUp/fadeLeft/blink/float/spin
+- `data/translations/fr.json` — Ajout `hero.cta_cv`
+- `data/translations/en.json` — Ajout `hero.cta_cv`
+- `js/components/Navbar.js` — Dispatch `lang-change` après toggle de langue
+- `js/core/router.js` — Écoute `lang-change` → re-rend la page courante dans la nouvelle langue
+
+### Notes
+- Déposer la photo dans `assets/images/profile/photo.jpg` et décommenter le `<img>` dans `HomePage.js`
+- Déposer le CV PDF dans `assets/cv/CV_Anlovi.pdf` pour activer le bouton téléchargement
+- Mettre à jour les URLs GitHub/LinkedIn dans `HomePage.js` (lignes SOCIAL)
+
+---
+
 ## [0.3.0] — 2026-06-24
 
 ### Added
