@@ -73,7 +73,7 @@ const CONTACT_INFO = [
 ];
 
 const SOCIAL_LINKS = [
-  { icon: ICON_GITHUB,   label: 'GitHub',   href: 'https://github.com/bertin-anlovi' },
+  { icon: ICON_GITHUB,   label: 'GitHub',   href: 'https://github.com/kbtino' },
   { icon: ICON_LINKEDIN, label: 'LinkedIn', href: 'https://www.linkedin.com/in/bertin-anlovi' },
 ];
 
